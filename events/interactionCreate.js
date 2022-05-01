@@ -26,9 +26,6 @@ module.exports = {
           case 'play':
             desc = ['Starts to play Lo-fi radio station!']
             break;
-          case 'forceplay':
-            desc = ['Allows you to force play the given radio station', 'station', 'The name of the station to play', false]
-            break;
           case 'stop':
             desc = ['Stops the current Voice session']
             break;

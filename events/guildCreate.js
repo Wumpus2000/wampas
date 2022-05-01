@@ -10,16 +10,24 @@ module.exports = {
           .setLabel('Play')
           .setEmoji('956032213009457202')
           .setCustomId('play'),
+
         new MessageButton()
-        .setStyle('LINK')
-        .setLabel('Website')
-        .setURL('http://wampas.gg/')
-        .setEmoji('957042683749208094'),
+          .setLabel('invite')
+          .setStyle('LINK')
+          .setURL('https://discord.com/oauth2/authorize?client_id=970081902658744361&permissions=8&scope=applications.commands%20bot')
+          .setEmoji('956378103603658802'),
+
         new MessageButton()
         .setLabel('Support')
         .setStyle('LINK')
         .setURL('https://discord.gg/CJ4HVZK2Za')
-        .setEmoji('956378149875253290')
+        .setEmoji('956378149875253290'),
+
+        new MessageButton()
+        .setStyle('LINK')
+        .setLabel('Website')
+        .setURL('http://wampas.gg/')
+        .setEmoji('957042683749208094')
       )
     try {
       let defaultChannel = "";

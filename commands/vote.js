@@ -1,39 +1,46 @@
-const { MessageEmbed } = require("discord.js");
 const {
-    SlashCommandBuilder
-  } = require('@discordjs/builders');
-  
-  module.exports = {
-    data: new SlashCommandBuilder()
-      .setName('vote')
-      .setDescription('shows wampas vote links.'),
-    async execute(interaction, client) {
+  SlashCommandBuilder
+} = require('@discordjs/builders');
+const {
+  MessageEmbed,
+  MessageActionRow,
+  MessageButton,
+  MessageSelectMenu
+} = require('discord.js');
 
-    const { MessageActionRow, MessageButton } = require("discord.js");
-const btn1 = new MessageButton()
-      .setLabel("Vote")
-      .setEmoji(`949765559703203841`)
-      .setStyle("LINK")
-      .setURL(`https://top.gg/bot/940463579247829032`);
+module.exports = {
+  data: new SlashCommandBuilder()
+    .setName('vote')
+    .setDescription('shows wampas votes links.'),
+  async execute(interaction, client) {
 
+    const row2 = new MessageActionRow()
+      .addComponents(
+        new MessageButton()
+        .setStyle('LINK')
+        .setLabel('Bot Vote')
+        .setURL('https://top.gg/bot/970081902658744361')
+        .setEmoji('949765559703203841'),
+        new MessageButton()
+        .setStyle('LINK')
+        .setLabel('Server Vote')
+        .setURL('https://top.gg/servers/939720556700368907')
+        .setEmoji('949765559703203841')
+      )
+    const embed = new MessageEmbed()
+      .setColor('BLURPLE')
+      .setAuthor({
+        name: "Wampas's votes",
+        iconURL: client.user.displayAvatarURL()
+      })
+      .setDescription("**<:CircleThumbsUp:949765559703203841> here are my votes links, everybody vote lmao.**")
 
+      .setTimestamp()
+    interaction.reply({
+      embeds: [embed],
+      components: [row2]
+    });
 
-
-
-let buttonList = [btn1];
-const row = new MessageActionRow().addComponents(buttonList);
-
-
-      const vote = new MessageEmbed() .setDescription(`<:CircleThumbsUp:959544721540255774> | **Here is my Vote link, if you see this you have to vote lmao**`)
-  .setColor(`#5865f2`);
-      
-   
- return interaction.reply({
-        embeds: [vote],
-   components: [row],
-        ephemeral: false,
-      });
-
-    
   }
-};
+
+}
