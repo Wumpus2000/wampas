@@ -3,11 +3,9 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 
 
     module.exports = {
-        name: "userinfo",
-        description: "Displays the userinfo of the specified target.",
         data: new SlashCommandBuilder()
         .setName('userinfo')
-        .setDescription('Displays the userinfo of the specified target.')
+        .setDescription('Sends information regarding a user')
         .addUserOption(option => option.setName('user').setDescription('The user')
         .setRequired(false),
         ),
