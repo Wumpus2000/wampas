@@ -24,8 +24,6 @@ const {
                 { name: "**Boost level**", value: `${guild.premiumTier}` || "0", inline: true },
                 { name: "**Boosters**", value: `${guild.premiumSubscriptionCount}`, inline: true },
                 { name: "**Shard ID**", value: `${guild.shardId}`, inline: true },
-                { name: "**Moderation**", value: `${guild.verificationLevel}` || "None", inline: true },
-                { name: "**Partnered**", value: `${guild.partnered}`, inline: true },
                 { name: "**Channels**", value: `
 <:Dashboard:966913468676575282> Categories: ${guild.channels.cache.filter((c) => c.type === "GUILD_CATEGORY").size}
 <:Channel:966914264214413372> Text: ${guild.channels.cache.filter((c) => c.type === "GUILD_TEXT").size}
