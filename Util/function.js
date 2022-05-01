@@ -43,7 +43,7 @@ async function play(interaction, url, stName, replied) {
       { name: "**Includes url**", value: `${!urls.includes(url)}`, inline: true },
     )
     .setImage("https://cdn.discordapp.com/attachments/939720531492605963/968023075771797555/lofi.png")
-    .setDescription(`**<:CirclePause:949765540564586616> | Started playing ${stName}**`)
+    .setDescription(`**<:CirclePlay:949765540543610880> | Started playing ${stName}**`)
   replied ? interaction.followUp({
     embeds: [embed]
   }) : interaction.reply({
