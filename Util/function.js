@@ -43,7 +43,7 @@ async function play(interaction, url, stName, replied) {
       { name: "**Includes url**", value: `${!urls.includes(url)}`, inline: true },
     )
     .setImage("https://cdn.discordapp.com/attachments/939720531492605963/968023075771797555/lofi.png")
-    .setDescription(`**<:CirclePlay:949765540543610880> | Started playing ${stName}**`)
+    .setDescription(`**<:CirclePause:949765540564586616> | Started playing ${stName}**`)
   replied ? interaction.followUp({
     embeds: [embed]
   }) : interaction.reply({
@@ -58,7 +58,7 @@ async function leave(interaction) {
   else {
     let embed = new MessageEmbed()
       .setColor('BLURPLE')
-      .setDescription(`**<:CirclePause:949765540564586616> | Stopped and Left playing in <#${interaction.guild.me.voice.channelId}>**`)
+      .setDescription(`**<:CirclePlay:949765540543610880> | Stopped and Left playing in <#${interaction.guild.me.voice.channelId}>**`)
 
     const connection = await getVoiceConnection(interaction.guildId);
     if (!connection) return interaction.reply({ content: `THere aren't any active Voice connection in this Server`, ephemeral: true })
