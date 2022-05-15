@@ -19,7 +19,7 @@ module.exports = {
     .setColor("BLURPLE")
     .setTitle("Client Status")
     .setImage("https://cdn.discordapp.com/attachments/919540885899853834/975253181149896704/banners.png")
-    .setDescription(`<:Text:972972968986681364> **GENERAL**\n • **Client:** <:CircleGreen:953821966442319912> ONLINE 
+    .setDescription(`<:Text:975259072792264734> **GENERAL**\n • **Client:** <:CircleGreen:953821966442319912> ONLINE 
     • **Ping:** ${client.ws.ping}ms\n • **Uptime:** <t:${parseInt(client.readyTimestamp / 1000)}:R>\n`)
 
 interaction.reply({ embeds: [Response], ephemeral: false });
