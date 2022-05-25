@@ -5,9 +5,7 @@ const {
   Intents
 } = require('discord.js');
 const fs = require('fs')
-const {
-  config
-} = require('dotenv')
+const {config } = require('dotenv')
 const func = require('./Util/function.js');
 config({
   path: `${__dirname}/.env`
